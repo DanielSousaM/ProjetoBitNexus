@@ -4,6 +4,9 @@
 
 package com.mycompany.bitnexus;
 
+import static Controller.ConexaoComBancoDados.conectar;
+import java.sql.Connection;
+
 /**
  *
  * @author ALUNO
@@ -11,6 +14,10 @@ package com.mycompany.bitnexus;
 public class BitNexus {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Connection conexao = conectar();
+        
+        if(conexao != null){
+            System.out.println(conexao);
+        } // fim do if
     }
 }

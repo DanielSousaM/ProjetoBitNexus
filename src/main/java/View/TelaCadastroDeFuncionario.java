@@ -183,7 +183,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         telefone.setBackground(new java.awt.Color(102, 0, 102));
         telefone.setForeground(new java.awt.Color(255, 255, 255));
         try {
-            telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("## #####-####")));
+            telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }

@@ -11,15 +11,15 @@ package Model;
 public class Cadastrodeplano {
     private int idPLANOS;
     private String nomePlano;
-    private String driscricaoplano;
+    private String descricaoplano;
     private double valorPlano;
     private double taxaPlano;
     private String statusPlano;
 
-    public Cadastrodeplano(int idPLANOS, String nomePlano, String driscricaoplano, double valorPlano, double taxaPlano, String statusPlano) {
+    public Cadastrodeplano(int idPLANOS, String nomePlano, String descricaoplano, double valorPlano, double taxaPlano, String statusPlano) {
         this.idPLANOS = idPLANOS;
         this.nomePlano = nomePlano;
-        this.driscricaoplano = driscricaoplano;
+        this.descricaoplano = descricaoplano;
         this.valorPlano = valorPlano;
         this.taxaPlano = taxaPlano;
         this.statusPlano = statusPlano;
@@ -45,12 +45,12 @@ public class Cadastrodeplano {
         this.nomePlano = nomePlano;
     }
 
-    public String getDriscricaoplano() {
-        return driscricaoplano;
+    public String getDescricaoplano() {
+        return descricaoplano;
     }
 
-    public void setDriscricaoplano(String driscricaoplano) {
-        this.driscricaoplano = driscricaoplano;
+    public void setDescricaoplano(String descricaoplano) {
+        this.descricaoplano = descricaoplano;
     }
 
     public double getValorPlano() {

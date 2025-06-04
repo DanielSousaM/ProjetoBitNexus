@@ -21,7 +21,7 @@ public class CadastrodeplanoController {
                 PreparedStatement ps = conn.prepareStatement(sql)) {
                 
                 ps.setString(1, e.getNomePlano());
-                ps.setString(2, e.getDriscricaoplano());
+                ps.setString(2, e.getDescricaoplano());
                 ps.setDouble(3, e.getValorPlano());
                 ps.setDouble(4, e.getTaxaPlano());
                 ps.setString(5, e.getStatusPlano());

@@ -4,7 +4,10 @@
  */
 package View;
 
+import Controller.MonitoramentoController;
+import Model.MonitoramentoModel;
 import View.TelaMonitoramento;
+import javax.swing.JOptionPane;
 
 
 
@@ -13,6 +16,8 @@ import View.TelaMonitoramento;
  * @author ALUNO
  */
 public class TelaNovoAparelho extends javax.swing.JFrame {
+    
+    MonitoramentoController controler = new MonitoramentoController();
 
     /**
      * Creates new form TelaNovoAparelho
@@ -108,9 +113,18 @@ public class TelaNovoAparelho extends javax.swing.JFrame {
 
     private void confirmaraparelhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmaraparelhoActionPerformed
         // TODO add your handling code here:
-       
+      MonitoramentoModel novoAparelho = new MonitoramentoModel();
+        
+        novoAparelho.setTipoMaquina((String)tipoaparelho.getSelectedItem());
+        novoAparelho.setNomeMaquina((String)nomeaparelho.getText()); 
      
-      
+        boolean result = controler.Monitoramento(novoAparelho);
+        
+        if (result != false){
+            JOptionPane.showMessageDialog(null, "Cadastro de aparelho realizado com sucesso");
+        } else {
+            JOptionPane.showMessageDialog(null, "Falha ao cadastrar");
+        }
     }//GEN-LAST:event_confirmaraparelhoActionPerformed
 
     private void voltarnovoaparelhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarnovoaparelhoActionPerformed

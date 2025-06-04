@@ -16,7 +16,7 @@ import java.sql.SQLException;
  */
 public class CadastroDeFuncionarioController {
     
-    public boolean CadastroDeFuncionario(CadastroDeFuncionarioModel e)  throws SQLException{
+    public boolean CadastroDeFuncionario(CadastroDeFuncionarioModel e) {
         String sql = "INSERT INTO FUNCIONARIOS (nomeFuncionario, datanascimentoFuncionario, telefoneFuncionario, cpfFuncionario, emailFuncionario, senhaFuncionario, sexo) VALUES (?,?,?,?,?,?,?)";
         
         try (Connection conn = ConexaoComBancoDados.conectar();

@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author ALUNO
  */
 public class CodigoCaixaController {
-    public boolean CodigoCaixa(CodigoCaixaModel e) throws SQLException{
+    public boolean CodigoCaixa(CodigoCaixaModel e){
         String sql = "INSERT INTO CAIXA (tipoServico, valor, formadepagamento, dataUso, tempo) VALUES (?,?,?,?,?)";
         
         try (Connection conn = ConexaoComBancoDados.conectar();

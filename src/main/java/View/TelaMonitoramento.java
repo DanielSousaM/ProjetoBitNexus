@@ -65,7 +65,7 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         novoaparelho = new javax.swing.JButton();
         editaraparelho = new javax.swing.JButton();
-        excluiaparelho = new javax.swing.JButton();
+        excluiraparelho = new javax.swing.JButton();
         gerarrelatorio = new javax.swing.JButton();
         temadefundo = new javax.swing.JLabel();
 
@@ -77,8 +77,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
 
         pc1.setForeground(new java.awt.Color(0, 0, 0));
         pc1.setText("PC 1 ");
-
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\computer.png")); // NOI18N
 
         javax.swing.GroupLayout telaPC1Layout = new javax.swing.GroupLayout(telaPC1);
         telaPC1.setLayout(telaPC1Layout);
@@ -112,8 +110,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         play2.setForeground(new java.awt.Color(0, 0, 0));
         play2.setText("PLAY 2");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\controller.png")); // NOI18N
-
         javax.swing.GroupLayout telaPlay2Layout = new javax.swing.GroupLayout(telaPlay2);
         telaPlay2.setLayout(telaPlay2Layout);
         telaPlay2Layout.setHorizontalGroup(
@@ -145,8 +141,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
 
         play3.setForeground(new java.awt.Color(0, 0, 0));
         play3.setText("PLAY 3");
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\controller.png")); // NOI18N
 
         javax.swing.GroupLayout telaPlay3Layout = new javax.swing.GroupLayout(telaPlay3);
         telaPlay3.setLayout(telaPlay3Layout);
@@ -180,8 +174,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         play1.setForeground(new java.awt.Color(0, 0, 0));
         play1.setText("PLAY 1");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\controller.png")); // NOI18N
-
         javax.swing.GroupLayout telaPlay1Layout = new javax.swing.GroupLayout(telaPlay1);
         telaPlay1.setLayout(telaPlay1Layout);
         telaPlay1Layout.setHorizontalGroup(
@@ -213,8 +205,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
 
         pc3.setForeground(new java.awt.Color(0, 0, 0));
         pc3.setText("PC 3");
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\computer.png")); // NOI18N
 
         javax.swing.GroupLayout telaPC3Layout = new javax.swing.GroupLayout(telaPC3);
         telaPC3.setLayout(telaPC3Layout);
@@ -248,8 +238,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         simulador1.setForeground(new java.awt.Color(0, 0, 0));
         simulador1.setText("SIMULADOR 1");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\joystick.png")); // NOI18N
-
         javax.swing.GroupLayout telaSimulador1Layout = new javax.swing.GroupLayout(telaSimulador1);
         telaSimulador1.setLayout(telaSimulador1Layout);
         telaSimulador1Layout.setHorizontalGroup(
@@ -281,8 +269,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
 
         simulador2.setForeground(new java.awt.Color(0, 0, 0));
         simulador2.setText("SIMULADOR 2");
-
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\joystick.png")); // NOI18N
 
         javax.swing.GroupLayout telaSimulador2Layout = new javax.swing.GroupLayout(telaSimulador2);
         telaSimulador2.setLayout(telaSimulador2Layout);
@@ -316,8 +302,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         simulador3.setForeground(new java.awt.Color(0, 0, 0));
         simulador3.setText("SIMULADOR 3");
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\joystick.png")); // NOI18N
-
         javax.swing.GroupLayout telaSimulador3Layout = new javax.swing.GroupLayout(telaSimulador3);
         telaSimulador3.setLayout(telaSimulador3Layout);
         telaSimulador3Layout.setHorizontalGroup(
@@ -349,8 +333,6 @@ public class TelaMonitoramento extends javax.swing.JFrame {
 
         pc2.setForeground(new java.awt.Color(0, 0, 0));
         pc2.setText("PC 2");
-
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Documents\\NetBeansProjects\\Pacote de Icones\\icons 1\\computer.png")); // NOI18N
 
         javax.swing.GroupLayout telaPC2Layout = new javax.swing.GroupLayout(telaPC2);
         telaPC2.setLayout(telaPC2Layout);
@@ -400,19 +382,22 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         editaraparelho.setText("EDITAR APARELHO");
         getContentPane().add(editaraparelho, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 253, 145, -1));
 
-        excluiaparelho.setBackground(new java.awt.Color(102, 0, 102));
-        excluiaparelho.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        excluiaparelho.setForeground(new java.awt.Color(255, 255, 255));
-        excluiaparelho.setText("EXCLUIR APARELHO");
-        getContentPane().add(excluiaparelho, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 380, 150, -1));
+        excluiraparelho.setBackground(new java.awt.Color(102, 0, 102));
+        excluiraparelho.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        excluiraparelho.setForeground(new java.awt.Color(255, 255, 255));
+        excluiraparelho.setText("EXCLUIR APARELHO");
+        excluiraparelho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                excluiraparelhoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(excluiraparelho, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 380, 150, -1));
 
         gerarrelatorio.setBackground(new java.awt.Color(51, 0, 51));
         gerarrelatorio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         gerarrelatorio.setForeground(new java.awt.Color(255, 255, 255));
         gerarrelatorio.setText("GERAR RELATORIO");
         getContentPane().add(gerarrelatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(659, 460, 160, -1));
-
-        temadefundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\Cadastro (2).png")); // NOI18N
         getContentPane().add(temadefundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 520));
 
         pack();
@@ -422,6 +407,10 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_novoaparelhoActionPerformed
+
+    private void excluiraparelhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluiraparelhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_excluiraparelhoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -460,7 +449,7 @@ public class TelaMonitoramento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton editaraparelho;
-    private javax.swing.JButton excluiaparelho;
+    private javax.swing.JButton excluiraparelho;
     private javax.swing.JButton gerarrelatorio;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

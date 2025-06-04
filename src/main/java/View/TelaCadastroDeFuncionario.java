@@ -33,16 +33,16 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         nomecompleto = new javax.swing.JLabel();
         nomeFuncionario = new javax.swing.JTextField();
         cpf = new javax.swing.JLabel();
-        cpfdigitando = new javax.swing.JFormattedTextField();
+        cpfFuncionario = new javax.swing.JFormattedTextField();
         datadenacimento = new javax.swing.JLabel();
-        datanascFunci = new javax.swing.JFormattedTextField();
+        dataNascimentoFuncionario = new javax.swing.JFormattedTextField();
         genero = new javax.swing.JLabel();
-        opcao = new javax.swing.JComboBox<>();
+        sexo = new javax.swing.JComboBox<>();
         email = new javax.swing.JLabel();
-        falaoseeuemail = new javax.swing.JTextField();
+        emailFuncionario = new javax.swing.JTextField();
         senha = new javax.swing.JLabel();
-        senhadigitada = new javax.swing.JPasswordField();
-        entre = new javax.swing.JButton();
+        senhaFuncionario = new javax.swing.JPasswordField();
+        cadastrarFuncionario = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         editar = new javax.swing.JButton();
         excluir = new javax.swing.JButton();
@@ -81,82 +81,82 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         cpf.setText("CPF:");
         jPanel1.add(cpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
-        cpfdigitando.setBackground(new java.awt.Color(102, 0, 102));
-        cpfdigitando.setForeground(new java.awt.Color(255, 255, 255));
+        cpfFuncionario.setBackground(new java.awt.Color(102, 0, 102));
+        cpfFuncionario.setForeground(new java.awt.Color(255, 255, 255));
         try {
-            cpfdigitando.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            cpfFuncionario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        cpfdigitando.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        cpfdigitando.addActionListener(new java.awt.event.ActionListener() {
+        cpfFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        cpfFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfdigitandoActionPerformed(evt);
+                cpfFuncionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(cpfdigitando, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 220, 30));
+        jPanel1.add(cpfFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 220, 30));
 
         datadenacimento.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         datadenacimento.setForeground(new java.awt.Color(255, 255, 255));
         datadenacimento.setText("DATA DE NASCIMENTO: ");
         jPanel1.add(datadenacimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 190, -1));
 
-        datanascFunci.setBackground(new java.awt.Color(102, 0, 102));
-        datanascFunci.setForeground(new java.awt.Color(255, 255, 255));
+        dataNascimentoFuncionario.setBackground(new java.awt.Color(102, 0, 102));
+        dataNascimentoFuncionario.setForeground(new java.awt.Color(255, 255, 255));
         try {
-            datanascFunci.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            dataNascimentoFuncionario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        datanascFunci.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        datanascFunci.addActionListener(new java.awt.event.ActionListener() {
+        dataNascimentoFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        dataNascimentoFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                datanascFunciActionPerformed(evt);
+                dataNascimentoFuncionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(datanascFunci, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 150, 30));
+        jPanel1.add(dataNascimentoFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 150, 30));
 
         genero.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         genero.setForeground(new java.awt.Color(255, 255, 255));
         genero.setText("GENÊRO:");
         jPanel1.add(genero, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 80, -1));
 
-        opcao.setBackground(new java.awt.Color(102, 0, 102));
-        opcao.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        opcao.setForeground(new java.awt.Color(255, 255, 255));
-        opcao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar", "Masculino", "Feminino" }));
-        jPanel1.add(opcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 230, 30));
+        sexo.setBackground(new java.awt.Color(102, 0, 102));
+        sexo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        sexo.setForeground(new java.awt.Color(255, 255, 255));
+        sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar", "Masculino", "Feminino" }));
+        jPanel1.add(sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 230, 30));
 
         email.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         email.setForeground(new java.awt.Color(255, 255, 255));
         email.setText("E-MAIL:");
         jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 60, -1));
 
-        falaoseeuemail.setBackground(new java.awt.Color(102, 0, 102));
-        falaoseeuemail.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        falaoseeuemail.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(falaoseeuemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 540, 30));
+        emailFuncionario.setBackground(new java.awt.Color(102, 0, 102));
+        emailFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        emailFuncionario.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(emailFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 540, 30));
 
         senha.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         senha.setForeground(new java.awt.Color(255, 255, 255));
         senha.setText("SENHA:");
         jPanel1.add(senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 70, -1));
 
-        senhadigitada.setBackground(new java.awt.Color(102, 0, 102));
-        senhadigitada.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        senhadigitada.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(senhadigitada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 280, 30));
+        senhaFuncionario.setBackground(new java.awt.Color(102, 0, 102));
+        senhaFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        senhaFuncionario.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(senhaFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 280, 30));
 
-        entre.setBackground(new java.awt.Color(102, 0, 102));
-        entre.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        entre.setForeground(new java.awt.Color(255, 255, 255));
-        entre.setText("CADASTRAR");
-        entre.addActionListener(new java.awt.event.ActionListener() {
+        cadastrarFuncionario.setBackground(new java.awt.Color(102, 0, 102));
+        cadastrarFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        cadastrarFuncionario.setForeground(new java.awt.Color(255, 255, 255));
+        cadastrarFuncionario.setText("CADASTRAR");
+        cadastrarFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entreActionPerformed(evt);
+                cadastrarFuncionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(entre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 130, 30));
+        jPanel1.add(cadastrarFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 130, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -243,30 +243,21 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_nomeFuncionarioActionPerformed
 
-    private void entreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entreActionPerformed
+    private void cadastrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarFuncionarioActionPerformed
         // TODO add your handling code here:
-        CadastroDeFuncionarioModel Funcionario = new CadastroDeFuncionarioModel();
-        
-        Funcionario.setNomeFuncionario(nomeFuncionario.getText());
-        Funcionario.getDatanascimentoFuncionario();
-        
-        
-        // criar um funconario da classe
-        
-        
-    }//GEN-LAST:event_entreActionPerformed
+    }//GEN-LAST:event_cadastrarFuncionarioActionPerformed
 
-    private void datanascFunciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datanascFunciActionPerformed
+    private void dataNascimentoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataNascimentoFuncionarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_datanascFunciActionPerformed
+    }//GEN-LAST:event_dataNascimentoFuncionarioActionPerformed
 
     private void telefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_telefoneActionPerformed
 
-    private void cpfdigitandoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfdigitandoActionPerformed
+    private void cpfFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfFuncionarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cpfdigitandoActionPerformed
+    }//GEN-LAST:event_cpfFuncionarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,16 +304,16 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
     private javax.swing.JMenu botaoHome;
     private javax.swing.JMenu botaoMaquinas;
     private javax.swing.JMenu botaoPlanos;
+    private javax.swing.JButton cadastrarFuncionario;
     private javax.swing.JLabel corfundo;
     private javax.swing.JLabel cpf;
-    private javax.swing.JFormattedTextField cpfdigitando;
+    private javax.swing.JFormattedTextField cpfFuncionario;
+    private javax.swing.JFormattedTextField dataNascimentoFuncionario;
     private javax.swing.JLabel datadenacimento;
-    private javax.swing.JFormattedTextField datanascFunci;
     private javax.swing.JButton editar;
     private javax.swing.JLabel email;
-    private javax.swing.JButton entre;
+    private javax.swing.JTextField emailFuncionario;
     private javax.swing.JButton excluir;
-    private javax.swing.JTextField falaoseeuemail;
     private javax.swing.JLabel fone;
     private javax.swing.JLabel genero;
     private javax.swing.JLabel jLabel1;
@@ -331,9 +322,9 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
     private javax.swing.JMenuBar menuFuncionario;
     private javax.swing.JTextField nomeFuncionario;
     private javax.swing.JLabel nomecompleto;
-    private javax.swing.JComboBox<String> opcao;
     private javax.swing.JLabel senha;
-    private javax.swing.JPasswordField senhadigitada;
+    private javax.swing.JPasswordField senhaFuncionario;
+    private javax.swing.JComboBox<String> sexo;
     private javax.swing.JFormattedTextField telefone;
     private javax.swing.JToggleButton voltafuncionario;
     // End of variables declaration//GEN-END:variables

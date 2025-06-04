@@ -34,7 +34,7 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         telefone = new javax.swing.JLabel();
         endereço = new javax.swing.JLabel();
         campoEndereco = new javax.swing.JTextField();
-        campoTelefone = new javax.swing.JTextField();
+        telefoneCliente = new javax.swing.JFormattedTextField();
         campoEmail = new javax.swing.JTextField();
         nomeCompletocampo = new javax.swing.JTextField();
         cadastrarCliente = new javax.swing.JButton();
@@ -88,15 +88,14 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         });
         painelCadastro1.add(campoEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 340, 30));
 
-        campoTelefone.setBackground(new java.awt.Color(102, 0, 102));
-        campoTelefone.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        campoTelefone.setForeground(new java.awt.Color(255, 255, 255));
-        campoTelefone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoTelefoneActionPerformed(evt);
-            }
-        });
-        painelCadastro1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 340, -1));
+        telefoneCliente.setBackground(new java.awt.Color(102, 0, 102));
+        telefoneCliente.setForeground(new java.awt.Color(255, 255, 255));
+        try {
+            telefoneCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        painelCadastro1.add(telefoneCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 282, 340, 30));
 
         campoEmail.setBackground(new java.awt.Color(102, 0, 102));
         campoEmail.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -141,6 +140,7 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        campoCpf1.setOpaque(true);
         painelCadastro1.add(campoCpf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 340, 30));
         painelCadastro1.add(cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1040, 680));
 
@@ -186,10 +186,6 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private void campoEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEnderecoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoEnderecoActionPerformed
-
-    private void campoTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoTelefoneActionPerformed
 
     private void campoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmailActionPerformed
         // TODO add your handling code here:
@@ -259,7 +255,6 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField campoCpf1;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoEndereco;
-    private javax.swing.JTextField campoTelefone;
     private javax.swing.JLabel email;
     private javax.swing.JLabel endereço;
     private javax.swing.JMenuBar jMenuBar1;
@@ -267,6 +262,7 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private javax.swing.JTextField nomeCompletocampo;
     private javax.swing.JPanel painelCadastro1;
     private javax.swing.JLabel telefone;
+    private javax.swing.JFormattedTextField telefoneCliente;
     private javax.swing.JLabel tenhoConta;
     // End of variables declaration//GEN-END:variables
 }

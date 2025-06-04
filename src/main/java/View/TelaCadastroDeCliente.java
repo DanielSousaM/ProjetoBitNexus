@@ -28,13 +28,13 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private void initComponents() {
 
         painelCadastro1 = new javax.swing.JPanel();
+        telefoneCliente = new javax.swing.JFormattedTextField();
         nomeCompleto = new javax.swing.JLabel();
         email = new javax.swing.JLabel();
         campoCpf = new javax.swing.JLabel();
         telefone = new javax.swing.JLabel();
         endereço = new javax.swing.JLabel();
         campoEndereço = new javax.swing.JTextField();
-        campoTelefone = new javax.swing.JTextField();
         campoEmail = new javax.swing.JTextField();
         nomeCompletocampo = new javax.swing.JTextField();
         cadastrarCliente = new javax.swing.JButton();
@@ -52,6 +52,15 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         painelCadastro1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        telefoneCliente.setBackground(new java.awt.Color(102, 0, 102));
+        telefoneCliente.setForeground(new java.awt.Color(255, 255, 255));
+        try {
+            telefoneCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        painelCadastro1.add(telefoneCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 340, 30));
 
         nomeCompleto.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         nomeCompleto.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,16 +96,6 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
             }
         });
         painelCadastro1.add(campoEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 340, 30));
-
-        campoTelefone.setBackground(new java.awt.Color(102, 0, 102));
-        campoTelefone.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        campoTelefone.setForeground(new java.awt.Color(255, 255, 255));
-        campoTelefone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoTelefoneActionPerformed(evt);
-            }
-        });
-        painelCadastro1.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 340, -1));
 
         campoEmail.setBackground(new java.awt.Color(102, 0, 102));
         campoEmail.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -142,7 +141,7 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         painelCadastro1.add(campoCpf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 340, 30));
-        painelCadastro1.add(cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1040, 680));
+        painelCadastro1.add(cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -10, 1040, 680));
 
         butonHome.setText("HOME");
         jMenuBar1.add(butonHome);
@@ -186,10 +185,6 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private void campoEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEndereçoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoEndereçoActionPerformed
-
-    private void campoTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoTelefoneActionPerformed
 
     private void campoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmailActionPerformed
         // TODO add your handling code here:
@@ -259,7 +254,6 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField campoCpf1;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoEndereço;
-    private javax.swing.JTextField campoTelefone;
     private javax.swing.JLabel email;
     private javax.swing.JLabel endereço;
     private javax.swing.JMenuBar jMenuBar1;
@@ -267,6 +261,7 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private javax.swing.JTextField nomeCompletocampo;
     private javax.swing.JPanel painelCadastro1;
     private javax.swing.JLabel telefone;
+    private javax.swing.JFormattedTextField telefoneCliente;
     private javax.swing.JLabel tenhoConta;
     // End of variables declaration//GEN-END:variables
 }

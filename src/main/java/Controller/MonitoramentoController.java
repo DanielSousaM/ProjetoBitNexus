@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author ALUNO
  */
 public class MonitoramentoController {
-    public boolean Monitoramento(MonitoramentoModel e) throws SQLException{
+    public boolean Monitoramento(MonitoramentoModel e){
         String sql = "INSERT INTO MAQUINAS (nomeMaquina, tipoMaquina) VALUES (?,?)";
         
         try (Connection conn = ConexaoComBancoDados.conectar();

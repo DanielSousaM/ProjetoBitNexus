@@ -14,14 +14,14 @@ import java.sql.SQLException;
  * @author ALUNO
  */
 public class CadastrodeplanoController {
-    public boolean Cadastrodeplano(Cadastrodeplano e) throws SQLException{
+    public boolean Cadastrodeplano(Cadastrodeplano e){
         String sql = "INSET INTO PLANOS (nomePlano, descricaoPlano, valorPlano, taxaPlano, statusPlano) VALUES (?,?,?,?,?)";
         
         try (Connection conn = ConexaoComBancoDados.conectar();
                 PreparedStatement ps = conn.prepareStatement(sql)) {
                 
                 ps.setString(1, e.getNomePlano());
-                ps.setString(2, e.getDriscricaoplano());
+                ps.setString(2, e.getDescricaoplano());
                 ps.setDouble(3, e.getValorPlano());
                 ps.setDouble(4, e.getTaxaPlano());
                 ps.setString(5, e.getStatusPlano());

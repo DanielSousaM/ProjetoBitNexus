@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author ALUNO
  */
 public class CadastrodeplanoController {
-    public boolean Cadastrodeplano(Cadastrodeplano e) throws SQLException{
+    public boolean Cadastrodeplano(Cadastrodeplano e) {
         String sql = "INSET INTO PLANOS (nomePlano, descricaoPlano, valorPlano, taxaPlano, statusPlano) VALUES (?,?,?,?,?)";
         
         try (Connection conn = ConexaoComBancoDados.conectar();

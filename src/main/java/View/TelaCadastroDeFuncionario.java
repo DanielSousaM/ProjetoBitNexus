@@ -183,7 +183,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         telefone.setBackground(new java.awt.Color(102, 0, 102));
         telefone.setForeground(new java.awt.Color(255, 255, 255));
         try {
-            telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("## #####-####")));
+            telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -200,7 +200,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         voltafuncionario.setForeground(new java.awt.Color(255, 255, 255));
         voltafuncionario.setText("VOLTAR");
         jPanel1.add(voltafuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 110, -1));
-        jPanel1.add(corfundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 950, 570));
+        jPanel1.add(corfundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 0, 1020, 570));
 
         botaoHome.setText("HOME");
         menuFuncionario.add(botaoHome);

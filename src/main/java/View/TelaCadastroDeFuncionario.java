@@ -244,16 +244,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_nomeFuncionarioActionPerformed
 
     private void cadastrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarFuncionarioActionPerformed
-        // TODO add your handling code here:
-        CadastroDeFuncionarioModel Funcionario = new CadastroDeFuncionarioModel();
-        
-        Funcionario.setNomeFuncionario(nomeFuncionario.getText());
-        Funcionario.getDatanascimentoFuncionario();
-        
-        
-        // criar um funconario da classe
-        
-        
+        // TODO add your handling code here   
     }//GEN-LAST:event_cadastrarFuncionarioActionPerformed
 
     private void dataNascimentoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataNascimentoFuncionarioActionPerformed

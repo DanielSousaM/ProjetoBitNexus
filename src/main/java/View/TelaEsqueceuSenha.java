@@ -30,11 +30,11 @@ public class TelaEsqueceuSenha extends javax.swing.JFrame {
         emailEsqueciSenha = new javax.swing.JLabel();
         novaSenha = new javax.swing.JLabel();
         repitaSenha = new javax.swing.JLabel();
-        campoNovaSenha = new javax.swing.JPasswordField();
+        novasenha = new javax.swing.JPasswordField();
         redefinirSenha = new javax.swing.JButton();
         voltaTelaLogin = new javax.swing.JButton();
         tituloEsqueciSenha = new javax.swing.JLabel();
-        formatoSenha = new javax.swing.JPasswordField();
+        novasenhaR = new javax.swing.JPasswordField();
         campoEsqueciSenhaCpf = new javax.swing.JFormattedTextField();
         butonLayuot = new javax.swing.JLabel();
 
@@ -57,18 +57,18 @@ public class TelaEsqueceuSenha extends javax.swing.JFrame {
         repitaSenha.setText("REPITA A SENHA:");
         painelEsqueciSenha.add(repitaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
-        campoNovaSenha.setBackground(new java.awt.Color(102, 0, 102));
-        campoNovaSenha.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        campoNovaSenha.setForeground(new java.awt.Color(255, 255, 255));
-        campoNovaSenha.addActionListener(new java.awt.event.ActionListener() {
+        novasenha.setBackground(new java.awt.Color(102, 0, 102));
+        novasenha.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        novasenha.setForeground(new java.awt.Color(255, 255, 255));
+        novasenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNovaSenhaActionPerformed(evt);
+                novasenhaActionPerformed(evt);
             }
         });
-        painelEsqueciSenha.add(campoNovaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 350, -1));
+        painelEsqueciSenha.add(novasenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 350, -1));
 
         redefinirSenha.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        redefinirSenha.setText("Redefinir");
+        redefinirSenha.setText("REDEFINIR");
         redefinirSenha.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 redefinirSenhaMouseClicked(evt);
@@ -77,7 +77,7 @@ public class TelaEsqueceuSenha extends javax.swing.JFrame {
         painelEsqueciSenha.add(redefinirSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, -1, -1));
 
         voltaTelaLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        voltaTelaLogin.setText("Volta");
+        voltaTelaLogin.setText("VOLTAR");
         voltaTelaLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltaTelaLoginActionPerformed(evt);
@@ -90,15 +90,15 @@ public class TelaEsqueceuSenha extends javax.swing.JFrame {
         tituloEsqueciSenha.setText("Redefiniçao de Senha");
         painelEsqueciSenha.add(tituloEsqueciSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, -1));
 
-        formatoSenha.setBackground(new java.awt.Color(102, 0, 102));
-        formatoSenha.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        formatoSenha.setForeground(new java.awt.Color(255, 255, 255));
-        formatoSenha.addActionListener(new java.awt.event.ActionListener() {
+        novasenhaR.setBackground(new java.awt.Color(102, 0, 102));
+        novasenhaR.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        novasenhaR.setForeground(new java.awt.Color(255, 255, 255));
+        novasenhaR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                formatoSenhaActionPerformed(evt);
+                novasenhaRActionPerformed(evt);
             }
         });
-        painelEsqueciSenha.add(formatoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 350, -1));
+        painelEsqueciSenha.add(novasenhaR, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 350, -1));
 
         campoEsqueciSenhaCpf.setBackground(new java.awt.Color(102, 0, 102));
         campoEsqueciSenhaCpf.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,9 +124,9 @@ public class TelaEsqueceuSenha extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoNovaSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNovaSenhaActionPerformed
+    private void novasenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novasenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNovaSenhaActionPerformed
+    }//GEN-LAST:event_novasenhaActionPerformed
 
     private void voltaTelaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltaTelaLoginActionPerformed
         // TODO add your handling code here:
@@ -144,9 +144,9 @@ public class TelaEsqueceuSenha extends javax.swing.JFrame {
         
     }//GEN-LAST:event_redefinirSenhaMouseClicked
 
-    private void formatoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_formatoSenhaActionPerformed
+    private void novasenhaRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novasenhaRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_formatoSenhaActionPerformed
+    }//GEN-LAST:event_novasenhaRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,10 +187,10 @@ public class TelaEsqueceuSenha extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel butonLayuot;
     private javax.swing.JFormattedTextField campoEsqueciSenhaCpf;
-    private javax.swing.JPasswordField campoNovaSenha;
     private javax.swing.JLabel emailEsqueciSenha;
-    private javax.swing.JPasswordField formatoSenha;
     private javax.swing.JLabel novaSenha;
+    private javax.swing.JPasswordField novasenha;
+    private javax.swing.JPasswordField novasenhaR;
     private javax.swing.JPanel painelEsqueciSenha;
     private javax.swing.JButton redefinirSenha;
     private javax.swing.JLabel repitaSenha;

@@ -22,8 +22,9 @@ public class CadastroDeFuncionarioModel {
     private String cpfFuncionario;
     private String emailFuncionario;
     private String senhaFuncionario;
+    private String sexo;
 
-    public CadastroDeFuncionarioModel(int  idFUNCIONARIOS, String nomeFuncionario, String datanascimentoFuncionario, String telefoneFuncionario, String cpfFuncionario, String emailFuncionario, String senhaFuncionario) {
+    public CadastroDeFuncionarioModel(int  idFUNCIONARIOS, String nomeFuncionario, String datanascimentoFuncionario, String telefoneFuncionario, String cpfFuncionario, String emailFuncionario, String senhaFuncionario, String sexo) {
         this.idFUNCIONARIOS = idFUNCIONARIOS;
         this.nomeFuncionario = nomeFuncionario;
         this.datanascimentoFuncionario = datanascimentoFuncionario;
@@ -31,6 +32,7 @@ public class CadastroDeFuncionarioModel {
         this.cpfFuncionario = cpfFuncionario;
         this.emailFuncionario = emailFuncionario;
         this.senhaFuncionario = senhaFuncionario;
+        this.sexo = sexo; 
     }
  
     public CadastroDeFuncionarioModel() {
@@ -93,5 +95,13 @@ public class CadastroDeFuncionarioModel {
 
     public void setSenhaFuncionario(String senhaFuncionario) {
         this.senhaFuncionario = senhaFuncionario;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 } // chve da class

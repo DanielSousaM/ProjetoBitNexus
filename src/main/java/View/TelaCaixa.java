@@ -39,9 +39,9 @@ public class TelaCaixa extends javax.swing.JFrame {
         tabelaDasMaquinas = new javax.swing.JTable();
         tipoDeServicos = new javax.swing.JLabel();
         selecionarTipoDeServico = new javax.swing.JComboBox<>();
-        pagamento = new javax.swing.JComboBox<>();
+        formaPagamento = new javax.swing.JComboBox<>();
         valor = new javax.swing.JLabel();
-        pagamemtoDoServico = new javax.swing.JComboBox<>();
+        valorPagamento = new javax.swing.JComboBox<>();
         botaoLigar = new javax.swing.JToggleButton();
         botaoRelatorio = new javax.swing.JButton();
         imagemPanel = new javax.swing.JLabel();
@@ -133,27 +133,27 @@ public class TelaCaixa extends javax.swing.JFrame {
         });
         painelCaixa.add(selecionarTipoDeServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 140, 30));
 
-        pagamento.setBackground(new java.awt.Color(102, 0, 102));
-        pagamento.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        pagamento.setForeground(new java.awt.Color(255, 255, 255));
-        pagamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pix", "Cartão", "Dinheiro" }));
-        painelCaixa.add(pagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 106, 30));
+        formaPagamento.setBackground(new java.awt.Color(102, 0, 102));
+        formaPagamento.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        formaPagamento.setForeground(new java.awt.Color(255, 255, 255));
+        formaPagamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pix", "Cartão", "Dinheiro" }));
+        painelCaixa.add(formaPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 106, 30));
 
         valor.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         valor.setForeground(new java.awt.Color(255, 255, 255));
         valor.setText("VALOR: ");
         painelCaixa.add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 60, -1));
 
-        pagamemtoDoServico.setBackground(new java.awt.Color(102, 0, 102));
-        pagamemtoDoServico.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        pagamemtoDoServico.setForeground(new java.awt.Color(255, 255, 255));
-        pagamemtoDoServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "20 minutos - R$ 20,00", "30 minutos - R$ 40,00", "60 minutos - R$ 60,00", "Plano Amador- R$ 120,00", "Plano Profissional - R$  250,00", "Plano Lendário  - R$ 550,00" }));
-        pagamemtoDoServico.addActionListener(new java.awt.event.ActionListener() {
+        valorPagamento.setBackground(new java.awt.Color(102, 0, 102));
+        valorPagamento.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        valorPagamento.setForeground(new java.awt.Color(255, 255, 255));
+        valorPagamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "20 minutos - R$ 20,00", "30 minutos - R$ 40,00", "60 minutos - R$ 60,00", "Plano Amador- R$ 120,00", "Plano Profissional - R$  250,00", "Plano Lendário  - R$ 550,00" }));
+        valorPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pagamemtoDoServicoActionPerformed(evt);
+                valorPagamentoActionPerformed(evt);
             }
         });
-        painelCaixa.add(pagamemtoDoServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 230, 30));
+        painelCaixa.add(valorPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 230, 30));
 
         botaoLigar.setBackground(new java.awt.Color(102, 0, 102));
         botaoLigar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -218,9 +218,9 @@ public class TelaCaixa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_seleconarMaquinaActionPerformed
 
-    private void pagamemtoDoServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagamemtoDoServicoActionPerformed
+    private void valorPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorPagamentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pagamemtoDoServicoActionPerformed
+    }//GEN-LAST:event_valorPagamentoActionPerformed
 
     private void botaoLigarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLigarActionPerformed
         // TODO add your handling code here:
@@ -298,14 +298,13 @@ public class TelaCaixa extends javax.swing.JFrame {
     private javax.swing.JMenu botaoPlanos;
     private javax.swing.JButton botaoRelatorio;
     private javax.swing.JLabel formaDoPagamento;
+    private javax.swing.JComboBox<String> formaPagamento;
     private javax.swing.JLabel imagemPanel;
     private javax.swing.JLabel labelCaixa;
     private javax.swing.JLabel maquinas;
     private javax.swing.JMenuBar menu;
     private javax.swing.JScrollPane mesaDeMaquinas;
     private javax.swing.JTextField nomeCliente;
-    private javax.swing.JComboBox<String> pagamemtoDoServico;
-    private javax.swing.JComboBox<String> pagamento;
     private javax.swing.JPanel painelCaixa;
     private javax.swing.JLabel rotuloDoCliente;
     private javax.swing.JComboBox<String> selecionarTipoDeServico;
@@ -313,5 +312,6 @@ public class TelaCaixa extends javax.swing.JFrame {
     private javax.swing.JTable tabelaDasMaquinas;
     private javax.swing.JLabel tipoDeServicos;
     private javax.swing.JLabel valor;
+    private javax.swing.JComboBox<String> valorPagamento;
     // End of variables declaration//GEN-END:variables
 }

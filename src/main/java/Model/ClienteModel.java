@@ -15,18 +15,20 @@ public class ClienteModel {
    private String cpfCliente;
    private String telefoneCliente;
    private String enderecoCliente;
-   private String senhaCliente;
+  
 
-    public ClienteModel(int idCLIENTES, String nomeCliente, String emailCliente, String cpfCliente, String telefoneCliente, String enderecoCliente, String senhaCliente) {
+    public ClienteModel(int idCLIENTES, String nomeCliente, String emailCliente, String cpfCliente, String telefoneCliente, String enderecoCliente) {
         this.idCLIENTES = idCLIENTES;
         this.nomeCliente = nomeCliente;
         this.emailCliente = emailCliente;
         this.cpfCliente = cpfCliente;
         this.telefoneCliente = telefoneCliente;
         this.enderecoCliente = enderecoCliente;
-        this.senhaCliente = senhaCliente;
     }
 
+    public ClienteModel() {
+    }
+    
     public int getIdCLIENTES() {
         return idCLIENTES;
     }
@@ -35,9 +37,7 @@ public class ClienteModel {
         this.idCLIENTES = idCLIENTES;
     }
 
-    public ClienteModel() {
-    }
-
+    
     public String getNomeCliente() {
         return nomeCliente;
     }
@@ -77,12 +77,4 @@ public class ClienteModel {
     public void setEnderecoCliente(String enderecoCliente) {
         this.enderecoCliente = enderecoCliente;
     }
-
-    public String getSenhaCliente() {
-        return senhaCliente;
-    }
-
-    public void setSenhaCliente(String senhaCliente) {
-        this.senhaCliente = senhaCliente;
-    }   
 }

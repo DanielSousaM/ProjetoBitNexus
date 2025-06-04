@@ -31,7 +31,7 @@ public class TelaLogin extends javax.swing.JFrame {
         varivelSenha = new javax.swing.JLabel();
         butomLogin = new javax.swing.JButton();
         butonEsqueciSenha = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        senhaLogin = new javax.swing.JFormattedTextField();
         campoCpf1 = new javax.swing.JFormattedTextField();
         paonelLayout1 = new javax.swing.JLabel();
 
@@ -53,7 +53,7 @@ public class TelaLogin extends javax.swing.JFrame {
         painel1.add(varivelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 120, 60));
 
         butomLogin.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        butomLogin.setText("Login");
+        butomLogin.setText("LOGIN");
         butomLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 butomLoginMouseClicked(evt);
@@ -77,19 +77,19 @@ public class TelaLogin extends javax.swing.JFrame {
         });
         painel1.add(butonEsqueciSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, -1, -1));
 
-        jFormattedTextField1.setBackground(new java.awt.Color(102, 0, 102));
-        jFormattedTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        senhaLogin.setBackground(new java.awt.Color(102, 0, 102));
+        senhaLogin.setForeground(new java.awt.Color(255, 255, 255));
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###-###")));
+            senhaLogin.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###-###")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+        senhaLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ActionPerformed(evt);
+                senhaLoginActionPerformed(evt);
             }
         });
-        painel1.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 290, -1));
+        painel1.add(senhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 290, -1));
 
         campoCpf1.setBackground(new java.awt.Color(102, 0, 102));
         try {
@@ -125,9 +125,9 @@ public class TelaLogin extends javax.swing.JFrame {
         
     }//GEN-LAST:event_butomLoginMouseClicked
 
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+    private void senhaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+    }//GEN-LAST:event_senhaLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,9 +170,9 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel butonEsqueciSenha;
     private javax.swing.JLabel campoCpf;
     private javax.swing.JFormattedTextField campoCpf1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JPanel painel1;
     private javax.swing.JLabel paonelLayout1;
+    private javax.swing.JFormattedTextField senhaLogin;
     private javax.swing.JLabel varivelSenha;
     // End of variables declaration//GEN-END:variables
 }

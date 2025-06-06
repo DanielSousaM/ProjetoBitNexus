@@ -4,13 +4,18 @@
  */
 package View;
 
+import Controller.ClienteController;
+import Model.ClienteModel;
+import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author ALUNO
  */
 public class TelaCadastroDeCliente extends javax.swing.JFrame {
-
+    
+    ClienteController controler = new ClienteController();
     /**
      * Creates new form telaCadastro
      */
@@ -34,12 +39,12 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         campoCpf = new javax.swing.JLabel();
         telefone = new javax.swing.JLabel();
         endereço = new javax.swing.JLabel();
-        campoEndereço = new javax.swing.JTextField();
-        campoEmail = new javax.swing.JTextField();
+        enderecoCliente = new javax.swing.JTextField();
+        emailCliente = new javax.swing.JTextField();
         nomeCompletocampo = new javax.swing.JTextField();
         cadastrarCliente = new javax.swing.JButton();
         tenhoConta = new javax.swing.JLabel();
-        campoCpf1 = new javax.swing.JFormattedTextField();
+        cpfCliente = new javax.swing.JFormattedTextField();
         cadastro = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         butonHome = new javax.swing.JMenu();
@@ -60,6 +65,7 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        telefoneCliente.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         painelCadastro1.add(telefoneCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 340, 30));
 
         nomeCompleto.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -87,25 +93,25 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         endereço.setText("ENDEREÇO:");
         painelCadastro1.add(endereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, -1, -1));
 
-        campoEndereço.setBackground(new java.awt.Color(102, 0, 102));
-        campoEndereço.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        campoEndereço.setForeground(new java.awt.Color(255, 255, 255));
-        campoEndereço.addActionListener(new java.awt.event.ActionListener() {
+        enderecoCliente.setBackground(new java.awt.Color(102, 0, 102));
+        enderecoCliente.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        enderecoCliente.setForeground(new java.awt.Color(255, 255, 255));
+        enderecoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoEndereçoActionPerformed(evt);
+                enderecoClienteActionPerformed(evt);
             }
         });
-        painelCadastro1.add(campoEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 340, 30));
+        painelCadastro1.add(enderecoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 340, 30));
 
-        campoEmail.setBackground(new java.awt.Color(102, 0, 102));
-        campoEmail.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        campoEmail.setForeground(new java.awt.Color(255, 255, 255));
-        campoEmail.addActionListener(new java.awt.event.ActionListener() {
+        emailCliente.setBackground(new java.awt.Color(102, 0, 102));
+        emailCliente.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        emailCliente.setForeground(new java.awt.Color(255, 255, 255));
+        emailCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoEmailActionPerformed(evt);
+                emailClienteActionPerformed(evt);
             }
         });
-        painelCadastro1.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 340, -1));
+        painelCadastro1.add(emailCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 340, -1));
 
         nomeCompletocampo.setBackground(new java.awt.Color(102, 0, 102));
         nomeCompletocampo.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
@@ -133,14 +139,15 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         });
         painelCadastro1.add(tenhoConta, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
 
-        campoCpf1.setBackground(new java.awt.Color(102, 0, 102));
-        campoCpf1.setForeground(new java.awt.Color(255, 255, 255));
+        cpfCliente.setBackground(new java.awt.Color(102, 0, 102));
+        cpfCliente.setForeground(new java.awt.Color(255, 255, 255));
         try {
-            campoCpf1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            cpfCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        painelCadastro1.add(campoCpf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 340, 30));
+        cpfCliente.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        painelCadastro1.add(cpfCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 340, 30));
         painelCadastro1.add(cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -10, 1040, 680));
 
         butonHome.setText("HOME");
@@ -182,16 +189,31 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEndereçoActionPerformed
+    private void enderecoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enderecoClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoEndereçoActionPerformed
+    }//GEN-LAST:event_enderecoClienteActionPerformed
 
-    private void campoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmailActionPerformed
+    private void emailClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoEmailActionPerformed
+    }//GEN-LAST:event_emailClienteActionPerformed
 
     private void cadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarClienteActionPerformed
         // TODO add your handling code here:
+       ClienteModel cliente = new ClienteModel();
+
+      cliente.setNomeCliente((String)nomeCompletocampo.getText());
+      cliente.setEmailCliente((String)emailCliente.getText());
+      cliente.setCpfCliente((String)cpfCliente.getText());
+      cliente.setTelefoneCliente((String)telefoneCliente.getText());
+      cliente.setEnderecoCliente((String)enderecoCliente.getText());
+     
+      // boolean result = controler.CadastroCliente(cliente);
+            
+      if (controler.CadastroCliente(cliente)!=false){
+            JOptionPane.showMessageDialog(null, "Cadastro de cliente realizado com sucesso");
+        } else {
+            JOptionPane.showMessageDialog(null, "Falha ao cadastrar");
+        }
     }//GEN-LAST:event_cadastrarClienteActionPerformed
 
     private void tenhoContaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tenhoContaMouseClicked
@@ -251,10 +273,10 @@ public class TelaCadastroDeCliente extends javax.swing.JFrame {
     private javax.swing.JButton cadastrarCliente;
     private javax.swing.JLabel cadastro;
     private javax.swing.JLabel campoCpf;
-    private javax.swing.JFormattedTextField campoCpf1;
-    private javax.swing.JTextField campoEmail;
-    private javax.swing.JTextField campoEndereço;
+    private javax.swing.JFormattedTextField cpfCliente;
     private javax.swing.JLabel email;
+    private javax.swing.JTextField emailCliente;
+    private javax.swing.JTextField enderecoCliente;
     private javax.swing.JLabel endereço;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel nomeCompleto;

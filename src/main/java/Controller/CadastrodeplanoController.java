@@ -15,21 +15,21 @@ import java.sql.SQLException;
  */
 public class CadastrodeplanoController {
     public boolean Cadastrodeplano(Cadastrodeplano e) {
-        String sql = "INSET INTO PLANOS (nomePlano, descricaoPlano, valorPlano, taxaPlano, statusPlano) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO PLANOS (nomePlano, descricaoPlano, valorPlano, taxaPlano, statusPlano) VALUES (?,?,?,?,?)";
         
         try (Connection conn = ConexaoComBancoDados.conectar();
                 PreparedStatement ps = conn.prepareStatement(sql)) {
                 
                 ps.setString(1, e.getNomePlano());
-                ps.setString(2, e.getDescricaoplano());
+                ps.setString(2, e.getDescricaoPlano());
                 ps.setDouble(3, e.getValorPlano());
                 ps.setDouble(4, e.getTaxaPlano());
                 ps.setString(5, e.getStatusPlano());
-                
-                 int retorno = ps.executeUpdate();
-                 return retorno > 0;
+                int retorno= ps.executeUpdate();
+                 return retorno>0;
+                 
         } catch (SQLException er) {
-                er.getStackTrace();
+               System.out.println("Erro "+er);
                 return false;
         }
     }

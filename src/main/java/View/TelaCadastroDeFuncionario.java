@@ -4,7 +4,9 @@
  */
 package View;
 
+import Controller.CadastroDeFuncionarioController;
 import Model.CadastroDeFuncionarioModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -12,6 +14,7 @@ import Model.CadastroDeFuncionarioModel;
  */
 public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
 
+    CadastroDeFuncionarioController controler = new CadastroDeFuncionarioController();
     /**
      * Creates new form Casdastrodefuncionario
      */
@@ -245,6 +248,32 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
 
     private void cadastrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarFuncionarioActionPerformed
         // TODO add your handling code here   
+   
+        CadastroDeFuncionarioModel funcionario = new CadastroDeFuncionarioModel();
+        // cadastrar os dentro da classe CadastroDeFuncionarioModel
+        // getText() funciona apenas para compos do tipo TextField
+        funcionario.setNomeFuncionario((String)nomeFuncionario.getText());
+        funcionario.setDatanascimentoFuncionario((String)dataNascimentoFuncionario.getText());
+        funcionario.setTelefoneFuncionario((String)telefone.getText());
+        funcionario.setCpfFuncionario((String)cpfFuncionario.getText());
+        funcionario.setSexo((String)sexo.getSelectedItem());
+        funcionario.setEmailFuncionario((String)emailFuncionario.getText());
+        funcionario.setSenhaFuncionario(new String (senhaFuncionario.getPassword()));
+        
+        
+      
+        
+        if(controler.CadastroDeFuncionario(funcionario)){
+             JOptionPane.showMessageDialog(null,"Cadastrado com sucesso!");
+        }else{
+            JOptionPane.showMessageDialog(null,"Erro ao realizar cadastro!");
+        }
+        
+        /*if (result != false){
+            JOptionPane.showMessageDialog(null, "Cadastro de funcionario realizado com sucesso");
+        } else {
+            JOptionPane.showMessageDialog(null, "Falha ao cadastrar");
+        }*/
     }//GEN-LAST:event_cadastrarFuncionarioActionPerformed
 
     private void dataNascimentoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataNascimentoFuncionarioActionPerformed

@@ -26,7 +26,7 @@ public class MonitoramentoController {
             ps.setString(2, e.getTipoMaquina());
             
             int retorno = ps.executeUpdate();
-            return retorno > 0;
+            return true;
         } catch (SQLException er) {
             er.getStackTrace();
             return false;

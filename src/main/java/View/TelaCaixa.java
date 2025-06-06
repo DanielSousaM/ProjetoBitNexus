@@ -32,7 +32,7 @@ public class TelaCaixa extends javax.swing.JFrame {
         labelCaixa = new javax.swing.JLabel();
         rotuloDoCliente = new javax.swing.JLabel();
         nomeCliente = new javax.swing.JTextField();
-        seleconarMaquina = new javax.swing.JComboBox<>();
+        selecionarMaquina = new javax.swing.JComboBox<>();
         maquinas = new javax.swing.JLabel();
         formaDoPagamento = new javax.swing.JLabel();
         mesaDeMaquinas = new javax.swing.JScrollPane();
@@ -78,16 +78,16 @@ public class TelaCaixa extends javax.swing.JFrame {
         });
         painelCaixa.add(nomeCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 430, 30));
 
-        seleconarMaquina.setBackground(new java.awt.Color(102, 0, 102));
-        seleconarMaquina.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seleconarMaquina.setForeground(new java.awt.Color(255, 255, 255));
-        seleconarMaquina.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Play 1", "Play 2", "Play 3", "PC 1", "PC 2", "PC 3", "Simulador 1", "Simulador 2", "Simulador 3" }));
-        seleconarMaquina.addActionListener(new java.awt.event.ActionListener() {
+        selecionarMaquina.setBackground(new java.awt.Color(102, 0, 102));
+        selecionarMaquina.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        selecionarMaquina.setForeground(new java.awt.Color(255, 255, 255));
+        selecionarMaquina.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Play 1", "Play 2", "Play 3", "PC 1", "PC 2", "PC 3", "Simulador 1", "Simulador 2", "Simulador 3" }));
+        selecionarMaquina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seleconarMaquinaActionPerformed(evt);
+                selecionarMaquinaActionPerformed(evt);
             }
         });
-        painelCaixa.add(seleconarMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 200, 30));
+        painelCaixa.add(selecionarMaquina, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 200, 30));
 
         maquinas.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         maquinas.setForeground(new java.awt.Color(255, 255, 255));
@@ -214,9 +214,9 @@ public class TelaCaixa extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void seleconarMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleconarMaquinaActionPerformed
+    private void selecionarMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarMaquinaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_seleconarMaquinaActionPerformed
+    }//GEN-LAST:event_selecionarMaquinaActionPerformed
 
     private void valorPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorPagamentoActionPerformed
         // TODO add your handling code here:
@@ -307,8 +307,8 @@ public class TelaCaixa extends javax.swing.JFrame {
     private javax.swing.JTextField nomeCliente;
     private javax.swing.JPanel painelCaixa;
     private javax.swing.JLabel rotuloDoCliente;
+    private javax.swing.JComboBox<String> selecionarMaquina;
     private javax.swing.JComboBox<String> selecionarTipoDeServico;
-    private javax.swing.JComboBox<String> seleconarMaquina;
     private javax.swing.JTable tabelaDasMaquinas;
     private javax.swing.JLabel tipoDeServicos;
     private javax.swing.JLabel valor;

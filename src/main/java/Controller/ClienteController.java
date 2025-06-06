@@ -24,10 +24,10 @@ public class ClienteController {
                     ps.setString(2, e.getEmailCliente());
                     ps.setString(3, e.getCpfCliente());
                     ps.setString(4, e.getTelefoneCliente());
-                    ps.setString(5, e.getCpfCliente());
+                    ps.setString(5, e.getEnderecoCliente());
                     
                     int retorno = ps.executeUpdate();
-                    return retorno > 0;              
+                    return true;              
                 } catch (SQLException er) {
                     er.getStackTrace();
                     return false;

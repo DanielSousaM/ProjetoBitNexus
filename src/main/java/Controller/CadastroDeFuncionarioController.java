@@ -31,7 +31,7 @@ public class CadastroDeFuncionarioController {
                ps.setString(7, e.getSexo());
                
                int retorno = ps.executeUpdate();
-               return retorno > 0;
+               return true;
         }catch (SQLException er){
             er.getStackTrace();
             return false;

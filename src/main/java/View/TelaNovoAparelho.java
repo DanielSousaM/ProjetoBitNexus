@@ -67,7 +67,7 @@ public class TelaNovoAparelho extends javax.swing.JFrame {
         confirmaraparelho.setBackground(new java.awt.Color(102, 0, 102));
         confirmaraparelho.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         confirmaraparelho.setForeground(new java.awt.Color(255, 255, 255));
-        confirmaraparelho.setText("CONFIRMAR");
+        confirmaraparelho.setText("CADASTRAR");
         confirmaraparelho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmaraparelhoActionPerformed(evt);
@@ -113,7 +113,7 @@ public class TelaNovoAparelho extends javax.swing.JFrame {
 
     private void confirmaraparelhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmaraparelhoActionPerformed
         // TODO add your handling code here:
-      MonitoramentoModel novoAparelho = new MonitoramentoModel();
+        MonitoramentoModel novoAparelho = new MonitoramentoModel();
         
         novoAparelho.setTipoMaquina((String)tipoaparelho.getSelectedItem());
         novoAparelho.setNomeMaquina((String)nomeaparelho.getText()); 

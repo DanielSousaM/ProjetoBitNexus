@@ -4,13 +4,18 @@
  */
 package View;
 
+import Controller.CadastrodeplanoController;
+import Model.Cadastrodeplano;
+import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author ALUNO
  */
 public class TelaCadastroDePlano extends javax.swing.JFrame {
-
+    
+    CadastrodeplanoController controler = new CadastrodeplanoController(); 
     /**
      * Creates new form cadastroPlano2
      */
@@ -68,6 +73,7 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
 
         taxaPlano.setBackground(new java.awt.Color(102, 0, 102));
         taxaPlano.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        taxaPlano.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(taxaPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 150, 30));
 
         statusplano.setBackground(new java.awt.Color(102, 0, 102));
@@ -159,7 +165,7 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
         botaoCliente.setText("CLIENTE");
         menuPlano.add(botaoCliente);
 
-        botaoFuncionario.setText("FUNCIONÁIO");
+        botaoFuncionario.setText("FUNCIONÁRIO");
         menuPlano.add(botaoFuncionario);
 
         botaoPlanos.setText("PLANOS");
@@ -197,6 +203,26 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
 
     private void cadastroPlanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroPlanoActionPerformed
         // TODO add your handling code here:
+       Cadastrodeplano plano = new Cadastrodeplano();
+         
+      plano.setNomePlano((String)nomePlano.getText());
+      plano.setDescricaoPlano((String)descricaoPlano.getText());
+      plano.setValorPlano(Double.parseDouble(valorPlano.getText()));
+      plano.setTaxaPlano(Double.parseDouble(taxaPlano.getText()));
+      plano.setStatusPlano((String)statusPlano.getSelectedItem());
+      
+      boolean result = controler.Cadastrodeplano(plano);
+      
+       /*if(controler.Cadastrodeplano(plano)){
+           JOptionPane.showMessageDialog(null,"Cadastro com sucesso");
+       } else {   
+          JOptionPane.showMessageDialog(null,"Erro ao realizar");
+        }*/
+        if (result!=false){
+            JOptionPane.showMessageDialog(null, "Cadastro de plano realizado com sucesso");
+        } else {
+            JOptionPane.showMessageDialog(null, "Falha ao cadastrar");
+        }
     }//GEN-LAST:event_cadastroPlanoActionPerformed
 
     private void statusPlanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusPlanoActionPerformed

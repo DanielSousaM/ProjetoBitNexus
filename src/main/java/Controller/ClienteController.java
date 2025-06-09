@@ -7,7 +7,10 @@ package Controller;
 import Model.ClienteModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -33,4 +36,37 @@ public class ClienteController {
                     return false;
     }   
 }
+        
+        public List<ClienteModel> listarClientes(){
+            // criar uma variavel tipo lista
+            List<ClienteModel> lista = new ArrayList<>();
+            // criar o comando sql para listar dados do BD
+            String sql = "SELECT * FROM CLIENTES";
+            
+            try(Connection conn = ConexaoComBancoDados.conectar(); //conexao
+                  PreparedStatement ps = conn.prepareStatement(sql); // comando para executar
+                  ResultSet rs = ps.executeQuery()){ //guardar o resultado
+                
+                  //laço de repetição para percorrer o retorno do BD
+                  while(rs.next()){
+                      //criar um objeto da classe model
+                      ClienteModel classeCliente = new ClienteModel();
+                      //chamar os set e listar os dados do cliente
+                      classeCliente.setIdCLIENTES(rs.getInt("IdCLIENTLES"));
+                      classeCliente.setNomeCliente(rs.getString("nomeCliente"));
+                      classeCliente.setEmailCliente(rs.getString("emailCliente"));
+                      classeCliente.setCpfCliente(rs.getString("cpfCliente"));
+                      classeCliente.setTelefoneCliente(rs.getString("telefoneCliente"));
+                      classeCliente.setEnderecoCliente(rs.getString("enderecoCliente"));
+                      classeCliente.setPLANOS_IdPLANOS(rs.getInt("PLANOS_IdPLANOS"));
+                                            
+                      //jogar o objeto monitoramento dentro da lista                      
+                      lista.add(classeCliente);
+                  }
+                
+            } catch(SQLException e){
+                System.out.println("Erro ao listar clientes "+e);
+            } // fim do catch
+            return lista;
+        }// fim do metodo listar clientes
 }

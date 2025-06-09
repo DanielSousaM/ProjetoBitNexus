@@ -4,19 +4,47 @@
  */
 package View;
 
+import Controller.MonitoramentoController;
+import Model.MonitoramentoModel;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author ALUNO
  */
 public class TelaMonitoramento extends javax.swing.JFrame {
-
+    
+    MonitoramentoController controller = new MonitoramentoController();
     /**
      * Creates new form TelaMonitoramento
      */
     public TelaMonitoramento() {
         initComponents();
+        //listarMonitoramentoTabela();
     }
-
+    
+    public void listarMonitoramentoTabela(){
+        //jogando a lista do controller em uma variavel
+        List<MonitoramentoModel> listaMaquinas = controller.listarMaquinas();
+        // criando modelo padrao de tabela
+        DefaultTableModel modelo = new DefaultTableModel();
+                                                  // (DefaultTableModel) 
+                                                  // tabelamonitoramento.getModel();
+         //limpando as linhas da tabela
+         //modelo.setRowCount(0);
+        //jogar as informaçoes dentro da tabela modelo
+        for(MonitoramentoModel m : listaMaquinas){
+        
+             modelo.addRow(new Object[]{
+             
+             m.getNomeMaquina(),
+             m.getTipoMaquina()
+             });
+        }
+        //tabelaMonitoramento.setModel(modelo); captura o modelo da tabela
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

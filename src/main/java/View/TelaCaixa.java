@@ -36,13 +36,14 @@ public class TelaCaixa extends javax.swing.JFrame {
         maquinas = new javax.swing.JLabel();
         formaDoPagamento = new javax.swing.JLabel();
         mesaDeMaquinas = new javax.swing.JScrollPane();
-        tabelaDasMaquinas = new javax.swing.JTable();
+        tabelaMaquinas = new javax.swing.JTable();
         tipoDeServicos = new javax.swing.JLabel();
         selecionarTipoDeServico = new javax.swing.JComboBox<>();
         formaPagamento = new javax.swing.JComboBox<>();
         valor = new javax.swing.JLabel();
         valorPagamento = new javax.swing.JComboBox<>();
         botaoLigar = new javax.swing.JToggleButton();
+        voltarMenu = new javax.swing.JButton();
         botaoRelatorio = new javax.swing.JButton();
         imagemPanel = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
@@ -99,23 +100,23 @@ public class TelaCaixa extends javax.swing.JFrame {
         formaDoPagamento.setText("FORMA DE PAGAMENTO: ");
         painelCaixa.add(formaDoPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 200, 30));
 
-        tabelaDasMaquinas.setBackground(new java.awt.Color(102, 0, 102));
-        tabelaDasMaquinas.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        tabelaDasMaquinas.setForeground(new java.awt.Color(255, 255, 255));
-        tabelaDasMaquinas.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaMaquinas.setBackground(new java.awt.Color(102, 0, 102));
+        tabelaMaquinas.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        tabelaMaquinas.setForeground(new java.awt.Color(255, 255, 255));
+        tabelaMaquinas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "PC Game", "Consoles", "Simulador"
+                "Nome do Cliente", "Tipo de Serviço", "Máquina", "Tempo", "Forma de Pagamento"
             }
         ));
-        mesaDeMaquinas.setViewportView(tabelaDasMaquinas);
+        mesaDeMaquinas.setViewportView(tabelaMaquinas);
 
-        painelCaixa.add(mesaDeMaquinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 330, 310));
+        painelCaixa.add(mesaDeMaquinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 1020, 310));
 
         tipoDeServicos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tipoDeServicos.setForeground(new java.awt.Color(255, 255, 255));
@@ -164,12 +165,23 @@ public class TelaCaixa extends javax.swing.JFrame {
                 botaoLigarActionPerformed(evt);
             }
         });
-        painelCaixa.add(botaoLigar, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 660, -1, -1));
+        painelCaixa.add(botaoLigar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 650, -1, -1));
+
+        voltarMenu.setBackground(new java.awt.Color(102, 0, 102));
+        voltarMenu.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        voltarMenu.setForeground(new java.awt.Color(255, 255, 255));
+        voltarMenu.setText("VOLTAR");
+        voltarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarMenuActionPerformed(evt);
+            }
+        });
+        painelCaixa.add(voltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 120, -1));
 
         botaoRelatorio.setBackground(new java.awt.Color(102, 0, 102));
         botaoRelatorio.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaoRelatorio.setText("GERA RELATÓRIO");
-        painelCaixa.add(botaoRelatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 660, -1, 30));
+        painelCaixa.add(botaoRelatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 650, -1, 30));
 
         imagemPanel.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\Cadastro (2).png")); // NOI18N
         painelCaixa.add(imagemPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -60, 1130, 760));
@@ -246,6 +258,13 @@ public class TelaCaixa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeClienteActionPerformed
 
+    private void voltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuActionPerformed
+        // TODO add your handling code here:
+        TelaHome voltarMenu = new TelaHome() ;
+        voltarMenu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_voltarMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -309,9 +328,10 @@ public class TelaCaixa extends javax.swing.JFrame {
     private javax.swing.JLabel rotuloDoCliente;
     private javax.swing.JComboBox<String> selecionarMaquina;
     private javax.swing.JComboBox<String> selecionarTipoDeServico;
-    private javax.swing.JTable tabelaDasMaquinas;
+    private javax.swing.JTable tabelaMaquinas;
     private javax.swing.JLabel tipoDeServicos;
     private javax.swing.JLabel valor;
     private javax.swing.JComboBox<String> valorPagamento;
+    private javax.swing.JButton voltarMenu;
     // End of variables declaration//GEN-END:variables
 }

@@ -32,6 +32,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         nomecompleto = new javax.swing.JLabel();
         nomeFuncionario = new javax.swing.JTextField();
@@ -52,14 +53,13 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         fone = new javax.swing.JLabel();
         telefone = new javax.swing.JFormattedTextField();
         voltafuncionario = new javax.swing.JToggleButton();
-        corfundo = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaFuncionario = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
         menuFuncionario = new javax.swing.JMenuBar();
         botaoHome = new javax.swing.JMenu();
-        botaoCliente = new javax.swing.JMenu();
-        botaoFuncionário = new javax.swing.JMenu();
-        botaoPlanos = new javax.swing.JMenu();
-        botaoMaquinas = new javax.swing.JMenu();
-        botaoCaixa = new javax.swing.JMenu();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,7 +67,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
 
         nomecompleto.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         nomecompleto.setText("NOME COMPLETO:");
-        jPanel1.add(nomecompleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 160, 24));
+        jPanel1.add(nomecompleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 160, 24));
 
         nomeFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         nomeFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -77,12 +77,12 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
                 nomeFuncionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(nomeFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 460, 30));
+        jPanel1.add(nomeFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 460, 30));
 
         cpf.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         cpf.setForeground(new java.awt.Color(255, 255, 255));
         cpf.setText("CPF:");
-        jPanel1.add(cpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        jPanel1.add(cpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, -1, -1));
 
         cpfFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         cpfFuncionario.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,12 +97,12 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
                 cpfFuncionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(cpfFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 220, 30));
+        jPanel1.add(cpfFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, 270, 30));
 
         datadenacimento.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         datadenacimento.setForeground(new java.awt.Color(255, 255, 255));
         datadenacimento.setText("DATA DE NASCIMENTO: ");
-        jPanel1.add(datadenacimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 190, -1));
+        jPanel1.add(datadenacimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 190, -1));
 
         dataNascimentoFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         dataNascimentoFuncionario.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,38 +117,38 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
                 dataNascimentoFuncionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(dataNascimentoFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 150, 30));
+        jPanel1.add(dataNascimentoFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 150, 30));
 
         genero.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         genero.setForeground(new java.awt.Color(255, 255, 255));
         genero.setText("GENÊRO:");
-        jPanel1.add(genero, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 80, -1));
+        jPanel1.add(genero, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 80, -1));
 
         sexo.setBackground(new java.awt.Color(102, 0, 102));
         sexo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         sexo.setForeground(new java.awt.Color(255, 255, 255));
         sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar", "Masculino", "Feminino" }));
-        jPanel1.add(sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 230, 30));
+        jPanel1.add(sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 150, 230, 30));
 
         email.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         email.setForeground(new java.awt.Color(255, 255, 255));
         email.setText("E-MAIL:");
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 60, -1));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 60, -1));
 
         emailFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         emailFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         emailFuncionario.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(emailFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 540, 30));
+        jPanel1.add(emailFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 480, 30));
 
         senha.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         senha.setForeground(new java.awt.Color(255, 255, 255));
         senha.setText("SENHA:");
-        jPanel1.add(senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 70, -1));
+        jPanel1.add(senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 70, -1));
 
         senhaFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         senhaFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         senhaFuncionario.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(senhaFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 280, 30));
+        jPanel1.add(senhaFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 290, 30));
 
         cadastrarFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         cadastrarFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -159,7 +159,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
                 cadastrarFuncionarioActionPerformed(evt);
             }
         });
-        jPanel1.add(cadastrarFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 130, 30));
+        jPanel1.add(cadastrarFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 250, 130, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,18 +170,18 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         editar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         editar.setForeground(new java.awt.Color(255, 255, 255));
         editar.setText("EDITAR");
-        jPanel1.add(editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, -1, -1));
+        jPanel1.add(editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 250, -1, -1));
 
         excluir.setBackground(new java.awt.Color(102, 0, 102));
         excluir.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         excluir.setForeground(new java.awt.Color(255, 255, 255));
         excluir.setText("EXCLUIR");
-        jPanel1.add(excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, -1, -1));
+        jPanel1.add(excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, -1));
 
         fone.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         fone.setForeground(new java.awt.Color(255, 255, 255));
         fone.setText("FONE:");
-        jPanel1.add(fone, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 50, -1));
+        jPanel1.add(fone, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, 50, -1));
 
         telefone.setBackground(new java.awt.Color(102, 0, 102));
         telefone.setForeground(new java.awt.Color(255, 255, 255));
@@ -196,32 +196,40 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
                 telefoneActionPerformed(evt);
             }
         });
-        jPanel1.add(telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, 190, 30));
+        jPanel1.add(telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 190, 30));
 
         voltafuncionario.setBackground(new java.awt.Color(102, 0, 102));
         voltafuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         voltafuncionario.setForeground(new java.awt.Color(255, 255, 255));
         voltafuncionario.setText("VOLTAR");
-        jPanel1.add(voltafuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 110, -1));
-        jPanel1.add(corfundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 950, 570));
+        voltafuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltafuncionarioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(voltafuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 570, 110, -1));
+
+        tabelaFuncionario.setBackground(new java.awt.Color(102, 0, 102));
+        tabelaFuncionario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nome do Funcionário", "Data de Nascimento", "Telefone", "CPF", "Email", "Senha", "Genêro"
+            }
+        ));
+        jScrollPane1.setViewportView(tabelaFuncionario);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 940, 260));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cadastro (2).png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1240, 660));
 
         botaoHome.setText("HOME");
         menuFuncionario.add(botaoHome);
-
-        botaoCliente.setText("CLIENTE");
-        menuFuncionario.add(botaoCliente);
-
-        botaoFuncionário.setText("FUNCIONÁRIO");
-        menuFuncionario.add(botaoFuncionário);
-
-        botaoPlanos.setText("PLANOS");
-        menuFuncionario.add(botaoPlanos);
-
-        botaoMaquinas.setText("MÁQUINAS");
-        menuFuncionario.add(botaoMaquinas);
-
-        botaoCaixa.setText("CAIXA");
-        menuFuncionario.add(botaoCaixa);
 
         setJMenuBar(menuFuncionario);
 
@@ -288,6 +296,13 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cpfFuncionarioActionPerformed
 
+    private void voltafuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltafuncionarioActionPerformed
+        // TODO add your handling code here:
+        TelaHome voltarMenu = new TelaHome() ;
+        voltarMenu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_voltafuncionarioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -327,14 +342,8 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu botaoCaixa;
-    private javax.swing.JMenu botaoCliente;
-    private javax.swing.JMenu botaoFuncionário;
     private javax.swing.JMenu botaoHome;
-    private javax.swing.JMenu botaoMaquinas;
-    private javax.swing.JMenu botaoPlanos;
     private javax.swing.JButton cadastrarFuncionario;
-    private javax.swing.JLabel corfundo;
     private javax.swing.JLabel cpf;
     private javax.swing.JFormattedTextField cpfFuncionario;
     private javax.swing.JFormattedTextField dataNascimentoFuncionario;
@@ -345,8 +354,11 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton excluir;
     private javax.swing.JLabel fone;
     private javax.swing.JLabel genero;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JMenuBar menuFuncionario;
     private javax.swing.JTextField nomeFuncionario;
@@ -354,6 +366,7 @@ public class TelaCadastroDeFuncionario extends javax.swing.JFrame {
     private javax.swing.JLabel senha;
     private javax.swing.JPasswordField senhaFuncionario;
     private javax.swing.JComboBox<String> sexo;
+    private javax.swing.JTable tabelaFuncionario;
     private javax.swing.JFormattedTextField telefone;
     private javax.swing.JToggleButton voltafuncionario;
     // End of variables declaration//GEN-END:variables

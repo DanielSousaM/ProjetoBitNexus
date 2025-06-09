@@ -40,11 +40,7 @@ public class TelaHome extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         botaoHome = new javax.swing.JMenu();
-        botaoCliente = new javax.swing.JMenu();
-        botaoFuncionario = new javax.swing.JMenu();
-        botaoPlanos = new javax.swing.JMenu();
         botaoMaquinas = new javax.swing.JMenu();
-        botaoCaixa = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,37 +48,72 @@ public class TelaHome extends javax.swing.JFrame {
 
         botaoIconeCliente.setBackground(new java.awt.Color(255, 255, 255));
         botaoIconeCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/client.png"))); // NOI18N
+        botaoIconeCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIconeClienteActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaoIconeCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 136, 98, 110));
 
         botaoIconeFuncionario.setBackground(new java.awt.Color(255, 255, 255));
         botaoIconeFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaoIconeFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/group.png"))); // NOI18N
+        botaoIconeFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIconeFuncionarioActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaoIconeFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(363, 136, 99, 110));
 
         botaoIconePlanos.setBackground(new java.awt.Color(255, 255, 255));
         botaoIconePlanos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaoIconePlanos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/planning.png"))); // NOI18N
+        botaoIconePlanos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIconePlanosActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaoIconePlanos, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 136, 101, 112));
 
         botaoIconeMaquinas.setBackground(new java.awt.Color(255, 255, 255));
         botaoIconeMaquinas.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaoIconeMaquinas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/monitoring.png"))); // NOI18N
+        botaoIconeMaquinas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIconeMaquinasActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaoIconeMaquinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 113, 109));
 
         botaoIconeCaixa.setBackground(new java.awt.Color(255, 255, 255));
         botaoIconeCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/budget.png"))); // NOI18N
+        botaoIconeCaixa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIconeCaixaActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaoIconeCaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 315, 104, 109));
 
         botaopCliente.setBackground(new java.awt.Color(102, 0, 102));
         botaopCliente.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaopCliente.setForeground(new java.awt.Color(255, 255, 255));
         botaopCliente.setText("CLIENTE");
+        botaopCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaopClienteActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaopCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 254, 98, -1));
 
         botaopFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         botaopFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaopFuncionario.setForeground(new java.awt.Color(255, 255, 255));
         botaopFuncionario.setText("FUNCIONÁRIOS");
+        botaopFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaopFuncionarioActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaopFuncionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 254, -1, -1));
 
         botaopPlanos.setBackground(new java.awt.Color(102, 0, 102));
@@ -100,12 +131,22 @@ public class TelaHome extends javax.swing.JFrame {
         botaopMaquinas.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaopMaquinas.setForeground(new java.awt.Color(255, 255, 255));
         botaopMaquinas.setText("MÁQUINAS");
+        botaopMaquinas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaopMaquinasActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaopMaquinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, -1, -1));
 
         botaopCaixa.setBackground(new java.awt.Color(102, 0, 102));
         botaopCaixa.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         botaopCaixa.setForeground(new java.awt.Color(255, 255, 255));
         botaopCaixa.setText("CAIXA");
+        botaopCaixa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaopCaixaActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaopCaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 430, 104, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\Cadastro (2).png")); // NOI18N
@@ -113,21 +154,7 @@ public class TelaHome extends javax.swing.JFrame {
 
         botaoHome.setText("HOME");
         jMenuBar1.add(botaoHome);
-
-        botaoCliente.setText("CLIENTE");
-        jMenuBar1.add(botaoCliente);
-
-        botaoFuncionario.setText("FUNCIONÁRIO");
-        jMenuBar1.add(botaoFuncionario);
-
-        botaoPlanos.setText("PLANOS");
-        jMenuBar1.add(botaoPlanos);
-
-        botaoMaquinas.setText("MÁQUINAS");
         jMenuBar1.add(botaoMaquinas);
-
-        botaoCaixa.setText("CAIXA");
-        jMenuBar1.add(botaoCaixa);
 
         setJMenuBar(jMenuBar1);
 
@@ -147,7 +174,73 @@ public class TelaHome extends javax.swing.JFrame {
 
     private void botaopPlanosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaopPlanosActionPerformed
         // TODO add your handling code here:
+        TelaCadastroDePlano cadastrarPlano = new TelaCadastroDePlano();
+        cadastrarPlano.setVisible(true);
+        dispose();
     }//GEN-LAST:event_botaopPlanosActionPerformed
+
+    private void botaoIconeClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIconeClienteActionPerformed
+        // TODO add your handling code here:
+        TelaCadastroDeCliente cadastrarCliente = new TelaCadastroDeCliente();
+        cadastrarCliente.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoIconeClienteActionPerformed
+
+    private void botaopClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaopClienteActionPerformed
+        // TODO add your handling code here:
+        TelaCadastroDeCliente cadastrarCliente = new TelaCadastroDeCliente();
+        cadastrarCliente.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaopClienteActionPerformed
+
+    private void botaoIconeFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIconeFuncionarioActionPerformed
+        // TODO add your handling code here:
+        TelaCadastroDeFuncionario cadastrarFuncionario = new TelaCadastroDeFuncionario();
+        cadastrarFuncionario.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoIconeFuncionarioActionPerformed
+
+    private void botaopFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaopFuncionarioActionPerformed
+        // TODO add your handling code here:
+        TelaCadastroDeFuncionario cadastrarFuncionario = new TelaCadastroDeFuncionario();
+        cadastrarFuncionario.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaopFuncionarioActionPerformed
+
+    private void botaoIconePlanosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIconePlanosActionPerformed
+        // TODO add your handling code here:
+        TelaCadastroDePlano cadastrarPlano = new TelaCadastroDePlano();
+        cadastrarPlano.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoIconePlanosActionPerformed
+
+    private void botaoIconeMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIconeMaquinasActionPerformed
+        // TODO add your handling code here:
+        TelaMonitoramento monitoramento = new TelaMonitoramento();
+        monitoramento.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoIconeMaquinasActionPerformed
+
+    private void botaopMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaopMaquinasActionPerformed
+        // TODO add your handling code here:
+        TelaMonitoramento monitoramento = new TelaMonitoramento();
+        monitoramento.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaopMaquinasActionPerformed
+
+    private void botaoIconeCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIconeCaixaActionPerformed
+        // TODO add your handling code here:
+        TelaCaixa caixa = new TelaCaixa();
+        caixa.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoIconeCaixaActionPerformed
+
+    private void botaopCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaopCaixaActionPerformed
+        // TODO add your handling code here:
+        TelaCaixa caixa = new TelaCaixa();
+        caixa.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaopCaixaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,9 +278,6 @@ public class TelaHome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu botaoCaixa;
-    private javax.swing.JMenu botaoCliente;
-    private javax.swing.JMenu botaoFuncionario;
     private javax.swing.JMenu botaoHome;
     private javax.swing.JButton botaoIconeCaixa;
     private javax.swing.JButton botaoIconeCliente;
@@ -195,7 +285,6 @@ public class TelaHome extends javax.swing.JFrame {
     private javax.swing.JButton botaoIconeMaquinas;
     private javax.swing.JButton botaoIconePlanos;
     private javax.swing.JMenu botaoMaquinas;
-    private javax.swing.JMenu botaoPlanos;
     private javax.swing.JButton botaopCaixa;
     private javax.swing.JButton botaopCliente;
     private javax.swing.JButton botaopFuncionario;

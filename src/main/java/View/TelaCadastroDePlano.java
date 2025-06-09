@@ -47,7 +47,10 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
         valormensal = new javax.swing.JLabel();
         valorPlano = new javax.swing.JTextField();
         nomePlano = new javax.swing.JTextField();
-        imagemfundo = new javax.swing.JLabel();
+        voltarMenu = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaPlano = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
         menuPlano = new javax.swing.JMenuBar();
         botaoHome = new javax.swing.JMenu();
         botaoCliente = new javax.swing.JMenu();
@@ -113,7 +116,7 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
                 cadastroPlanoActionPerformed(evt);
             }
         });
-        jPanel1.add(cadastroPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+        jPanel1.add(cadastroPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, -1, -1));
 
         descricaoPlano.setBackground(new java.awt.Color(102, 0, 102));
         descricaoPlano.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -124,7 +127,7 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
         editarPlano.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         editarPlano.setForeground(new java.awt.Color(255, 255, 255));
         editarPlano.setText("EDITAR");
-        jPanel1.add(editarPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, -1, -1));
+        jPanel1.add(editarPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, -1));
 
         excluirPlano.setBackground(new java.awt.Color(102, 0, 102));
         excluirPlano.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -135,7 +138,7 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
                 excluirPlanoActionPerformed(evt);
             }
         });
-        jPanel1.add(excluirPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, -1, -1));
+        jPanel1.add(excluirPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, -1, -1));
 
         valormensal.setBackground(new java.awt.Color(102, 0, 102));
         valormensal.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -157,7 +160,44 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
             }
         });
         jPanel1.add(nomePlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 450, 30));
-        jPanel1.add(imagemfundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 6, 930, 520));
+
+        voltarMenu.setBackground(new java.awt.Color(102, 0, 102));
+        voltarMenu.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        voltarMenu.setForeground(new java.awt.Color(255, 255, 255));
+        voltarMenu.setText("VOLTAR");
+        voltarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarMenuActionPerformed(evt);
+            }
+        });
+        jPanel1.add(voltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 100, -1));
+
+        tabelaPlano.setBackground(new java.awt.Color(102, 0, 102));
+        tabelaPlano.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nome do Plano", "Descrição do Plano", "Valor", "Status do Plano", "Adesão"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tabelaPlano);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 600, 300));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cadastro (2).png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 1310, 580));
 
         botaoHome.setText("HOME");
         menuPlano.add(botaoHome);
@@ -233,6 +273,13 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_excluirPlanoActionPerformed
 
+    private void voltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuActionPerformed
+        // TODO add your handling code here:
+        TelaHome voltarMenu = new TelaHome() ;
+        voltarMenu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_voltarMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -282,17 +329,20 @@ public class TelaCadastroDePlano extends javax.swing.JFrame {
     private javax.swing.JLabel driscricaodoplano;
     private javax.swing.JButton editarPlano;
     private javax.swing.JButton excluirPlano;
-    private javax.swing.JLabel imagemfundo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuBar menuPlano;
     private javax.swing.JTextField nomePlano;
     private javax.swing.JLabel nomeplano;
     private javax.swing.JComboBox<String> statusPlano;
     private javax.swing.JLabel statusplano;
+    private javax.swing.JTable tabelaPlano;
     private javax.swing.JTextField taxaPlano;
     private javax.swing.JLabel taxaadesao;
     private javax.swing.JTextField valorPlano;
     private javax.swing.JLabel valormensal;
+    private javax.swing.JButton voltarMenu;
     // End of variables declaration//GEN-END:variables
 
 

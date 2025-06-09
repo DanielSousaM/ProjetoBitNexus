@@ -10,15 +10,18 @@ package Model;
  */
 public class ClienteModel {
    private int idCLIENTES;
+   private int PLANOS__IdPLANOS;
    private String nomeCliente;
    private String emailCliente;
    private String cpfCliente;
    private String telefoneCliente;
    private String enderecoCliente;
    
+   
 
-    public ClienteModel(int idCLIENTES, String nomeCliente, String emailCliente, String cpfCliente, String telefoneCliente, String enderecoCliente) {
+    public ClienteModel(int idCLIENTES, int PLANOS__IdPLANOS, String nomeCliente, String emailCliente, String cpfCliente, String telefoneCliente, String enderecoCliente) {
         this.idCLIENTES = idCLIENTES;
+        this.PLANOS__IdPLANOS = PLANOS__IdPLANOS;
         this.nomeCliente = nomeCliente;
         this.emailCliente = emailCliente;
         this.cpfCliente = cpfCliente;
@@ -32,6 +35,14 @@ public class ClienteModel {
 
     public void setIdCLIENTES(int idCLIENTES) {
         this.idCLIENTES = idCLIENTES;
+    }
+
+    public int getPLANOS__IdPLANOS() {
+        return PLANOS__IdPLANOS;
+    }
+
+    public void setPLANOS__IdPLANOS(int PLANOS__IdPLANOS) {
+        this.PLANOS__IdPLANOS = PLANOS__IdPLANOS;
     }
 
     public ClienteModel() {
@@ -75,5 +86,9 @@ public class ClienteModel {
 
     public void setEnderecoCliente(String enderecoCliente) {
         this.enderecoCliente = enderecoCliente;
+    }
+
+    public void setPLANOS_IdPLANOS(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
